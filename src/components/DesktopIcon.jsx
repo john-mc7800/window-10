@@ -30,9 +30,7 @@ export default function DesktopIcon() {
 
   return (
     <div className="mx-2 mt-2 flex flex-col flex-wrap gap-4">
-      {icons.length === 0 ? (
-        <p className="text-white">Loading icons...</p>
-      ) : (
+      {icons.length !== 0 && (
         icons.map((icon) => (
           <div
             key={icon.id}
