@@ -2,7 +2,7 @@ import DesktopIcon from "@/components/DesktopIcon";
 
 export default function Home() {
   return (
-    <div className="m-2">
+    <div className="fixed">
       <DesktopIcon />
     </div>
   );
