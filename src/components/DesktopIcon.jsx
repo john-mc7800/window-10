@@ -46,11 +46,14 @@ export default function DesktopIcon() {
       )}
 
       {openWindow && (
-        <Window
+        <div className="absolute  top-0 left-0">
+          <Window
           title={icons.find((icon) => icon.id === openWindow)?.name}
           content={<p>This is the content of {icons.find((icon) => icon.id === openWindow)?.name}.</p>}
           onClose={() => setOpenWindow(null)}
         />
+        </div>
+        
       )}
     </div>
   );
