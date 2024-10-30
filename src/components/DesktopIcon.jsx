@@ -1,28 +1,13 @@
-"use client"
+"use client";
+
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Window from "./Window";
+import IconsData from "../data/IconsData"; // Adjust the path as necessary
 
 export default function DesktopIcon() {
   const [openWindow, setOpenWindow] = useState(null);
-  const [icons, setIcons] = useState([]);
-
-  useEffect(() => {
-    const fetchIcons = async () => {
-      try {
-        const response = await fetch('/data/icons.json');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setIcons(data);
-      } catch (error) {
-        console.error('Failed to fetch icons:', error);
-      }
-    };
-
-    fetchIcons();
-  }, []);
+  const [icons] = useState(IconsData); // Directly use IconsData
 
   const handleIconDoubleClick = (iconId) => {
     setOpenWindow(iconId);
@@ -44,14 +29,13 @@ export default function DesktopIcon() {
       )}
 
       {openWindow && (
-        <div className="absolute  top-0 left-0">
+        <div className="absolute top-0 left-0">
           <Window
-          title={icons.find((icon) => icon.id === openWindow)?.name}
-          content={<p>This is the content of {icons.find((icon) => icon.id === openWindow)?.name}.</p>}
-          onClose={() => setOpenWindow(null)}
-        />
+            title={icons.find((icon) => icon.id === openWindow)?.name}
+            content={<p>This is the content of {icons.find((icon) => icon.id === openWindow)?.name}.</p>}
+            onClose={() => setOpenWindow(null)}
+          />
         </div>
-        
       )}
     </div>
   );
