@@ -19,7 +19,8 @@ const IconsData = [
   },
   {
     id: 'controlpanel',
-    name: 'Control Panel',
+    name: 'Control',
+    name1: 'Panel',
     imageSrc: '/images/control panel.png',
     altText: 'control panel',
   },
