@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { BsPinAngle } from 'react-icons/bs';
@@ -9,7 +10,7 @@ import MenuItem from './MenuItem';
 
 export default function MenuBar({ onClose }) {
   const [fileIsOpen, setFileIsOpen] = useState(false);
-  const menuRef = useRef(null); // Create a ref for the menu
+  const menuRef = useRef(null); 
 
   const handleFileButton = () => {
     setFileIsOpen((prev) => !prev);

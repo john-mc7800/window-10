@@ -5,7 +5,7 @@ import { VscSearch } from "react-icons/vsc";
 
 export default function LocationBar() {
   return (
-    <div className='grid grid-cols-[8vw_80vw_10vw] w-[100vw] justify-between  h-fill gap-0'>
+    <div className='grid grid-cols-[8vw_74vw_10vw] w-[93vw] justify-between gap-0'>
       <div className="flex flex-row items-center space-x-2 top-44 text-gray-400 font-thin text-md py-2 mx-2">
       <IoMdArrowRoundBack  />
       <IoMdArrowRoundForward   />
@@ -28,8 +28,8 @@ export default function LocationBar() {
       
       </div>
       <div className="relative w-fit">
-        <input type="text" placeholder='Search Quick access' className='border placeholder:text-gary-600 indent-2 pr-8 py-0.5' />
-        <VscSearch size={16} className='text-gary-600 absolute -top-1 right-3 my-2'/>
+        <input type="text" placeholder='Search Quick access' className='border placeholder:text-gary-600 placeholder:text-xs indent-2 pr-8 py-0.5' />
+        <VscSearch size={16} className='text-gary-600 absolute -top-1 right-3 my-3'/>
       </div>
     </div>
   )

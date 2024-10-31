@@ -1,15 +1,21 @@
 "use client"
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
-const AppStateContext= createContext(null)
+export const AppStateContext = createContext(null);
 
 
-function appstate({children}) {
+
+function AppState({children}) {
+  const [openWindow, setOpenWindow] = useState(null);
+  const closeWindow = () => {
+    setOpenWindow(null);
+  };
+
   return (
-    <AppStateContext.Provider value="">
+    <AppStateContext.Provider value={{openWindow,setOpenWindow,closeWindow}}>
       {children}
     </AppStateContext.Provider>
   )
 }
 
-export default appstate
+export default AppState;
