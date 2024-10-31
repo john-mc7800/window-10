@@ -31,7 +31,7 @@ export default function MenuBar({ onClose }) {
 
   return (
     <>
-      <div className='flex flex-row text-xs items-center cursor-context-menu '>
+      <div className='flex flex-row text-xs items-center cursor-context-menu fixed'>
         <button onClick={handleFileButton} className='px-4 cursor-context-menu  z-10 bg-[#005596] text-white py-0.5 '>File</button>
         <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0'>Home</button>
         <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0'>Share</button>
@@ -39,7 +39,7 @@ export default function MenuBar({ onClose }) {
       </div>
 
       {fileIsOpen && (
-        <div ref={menuRef} className="w-[45vw] h-[50vh] relative -top-9 z-10 bg-white border  mt-4">
+        <div ref={menuRef} className="w-[45vw] h-[50vh] relative -top-9 z-10 bg-white border  mt-8">
           <button onClick={handleFileButton} className='text-start text-xs px-4 py-1 cursor-context-menu border-y border-gray-200 z-10 w-full bg-[#F5F6F7]'>File</button>
           <div className="w-[45vw] h-[40vh] grid grid-cols-[50%_50%] border ">
             <div className="space-y-1 bg-[#FBFCFD] border overflow-hidden">

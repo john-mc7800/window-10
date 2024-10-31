@@ -9,5 +9,5 @@ const frequentPlaces = [
   { id: 9, name: 'Development' },
   { id: 10, name: 'New PF CV' },
 ];
-
 export default frequentPlaces;
+

@@ -6,6 +6,7 @@ import TitleBar from "./WindowComponents/TitleBar";
 import MenuBar from "./WindowComponents/MenuBar";
 import LocationBar from "./statusBarComponents/LocationBar";
 import { AppStateContext } from "@/context/AppState";
+import ThisPCMain from "./WindowComponents/ThisPCMain";
 
 export default function DesktopIcon() {
   const{openWindow,setOpenWindow,closeWindow}=useContext(AppStateContext)
@@ -49,6 +50,7 @@ export default function DesktopIcon() {
           />
           <MenuBar />
           <LocationBar />
+          <ThisPCMain/>
         </div>
       )}
       {openWindow === "network" && (
