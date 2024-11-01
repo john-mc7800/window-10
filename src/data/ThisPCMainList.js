@@ -66,6 +66,76 @@ const OneDrivelist = [
       icon: "/images/video.png",
     },
   ];
+ // Sample data for file structure using arrays with one file per folder
+ export const Recentfile = [
+  {
+    file: "docx.docx",
+    imageUrl: "/images/files/docx.png",
+  },
+  {
+    file: "Presentation.pptx",
+    imageUrl: "/images/files/pptx.png",
+  },
+  {
+    file: "Budget.xlsx",
+    imageUrl: "/images/files/xlsx.png",
+  },
+  {
+    file: "ProjectProposal.pdf",
+    imageUrl: "/images/files/pdf.png",
+  },
+  {
+    file: "Notes.txt",
+    imageUrl: "/images/files/txt.png",
+  },
+  {
+    file: "Vacation.jpg",
+    imageUrl: "/images/files/jpg.png",
+  },
+  {
+    file: "Invoice_2024.pdf",
+    imageUrl: "/images/files/pdf.png",
+  },
+  {
+    file: "DesignMockup.psd",
+    imageUrl: "/images/files/psd.png",
+  },
+  {
+    file: "DatabaseBackup.sql",
+    imageUrl: "/images/files/sql.png",
+  },
+  {
+    file: "MeetingMinutes.docx",
+    imageUrl: "/images/files/docx.png",
+  },
+  {
+    file: "SalesReport_Q3.xlsx",
+    imageUrl: "/images/files/xlsx.png",
+  },
+  
+  {
+    file: "TermsOfService.pdf",
+    imageUrl: "/images/files/pdf.png",
+  },
+  {
+    file: "FinancialStatement.pdf",
+    imageUrl: "/images/files/pdf.png",
+  },
+  {
+    file: "Screenshot_2024.png",
+    imageUrl: "/images/files/png.png",
+  },
+  {
+    file: "Portfolio.pdf",
+    imageUrl: "/images/files/pdf.png",
+  },
+  {
+    file: "Whitepaper.docx",
+    imageUrl: "/images/files/docx.png",
+  },
+];
+
+
   // /app/data/ThisPCMainList.js
 export const folders = [
   "Images",
