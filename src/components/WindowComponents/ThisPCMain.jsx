@@ -42,7 +42,7 @@ export default function ThisPCMain() {
                     </button>
                     {isOpen && (
                         <div className="w-full  px-6 bg-white">
-                        <Files/>
+                        {/* <Files/> */}
                         </div>
                     )}
                 </div>
