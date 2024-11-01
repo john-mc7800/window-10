@@ -1,58 +1,50 @@
 import React, { useState } from 'react';
-import { IoIosArrowForward } from 'react-icons/io';
-import { GrOnedrive } from "react-icons/gr";
-import { IoStarSharp } from 'react-icons/io5';
-import OneDrivelist, {quickAccesslist} from '@/data/ThisPCMainList';
-import Image from 'next/image';
-import QuickAccessList from './QuickAccessList';
+import OneDrivelist, { quickAccesslist, ThisPCList } from '@/data/ThisPCMainList';
+import SidebarList from '../SidebarList';
+import Folder from '../Folder';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+
+
 
 export default function ThisPCMain() {
-    const [activeItem, setActiveItem] = useState(null);
+    const [isOpen, setIsOpen] = useState(false)
 
-    const iconMapping = {
-        GrOnedrive: GrOnedrive,
-        IoStarSharp: IoStarSharp,
-    };
-
-    const toggleActive = (itemId) => {
-        setActiveItem(itemId === activeItem ? null : itemId); // Toggle functionality
-    };
-
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen)
+  }
     return (
-        <div className="w-fill h-fill grid grid-cols-[14vw_1fr] h-[100%] fixed top-[70px]">
+        <div className="w-fill h-fill grid grid-cols-[202px_1fr] h-[100%] fixed top-[70px] select-none">
             <div className="pt-4 border-r h-full">
-                {/* Manually rendering each item from ThisPCMainList */}
-                <div className={`${activeItem === "quickAccess" ? "bg-neutral-300 hover:outline hover:outline-blue-500 hover:outline-offset-0 hover:outline-1" : ""} items-start hover:bg-blue-300 hover:bg-opacity-80 py-1 grid grid-cols-[10%_10%_1fr] gap- pl-2`} onClick={() => toggleActive("quickAccess")}>
-                    <IoIosArrowForward size={14} className='text-gray-400' />
-                    <div><IoStarSharp size={14} className="text-[#2FB3FF] mx-2" /></div>
-                    <p className="text-xs ml-3 select-none">Quick access</p>
-                </div>
-                {activeItem === "quickAccess" && <QuickAccessList list={quickAccesslist}/>}
-
-                
-                <div className={`${activeItem === "oneDrive" ? "bg-neutral-300 hover:outline hover:outline-blue-500 hover:outline-offset-0 hover:outline-1" : ""} items-start hover:bg-blue-300 hover:bg-opacity-80 py-1 grid grid-cols-[10%_10%_1fr] gap- pl-2`} onClick={() => toggleActive("oneDrive")} >
-                    <IoIosArrowForward size={14} className='text-gray-400' />
-                    <div><GrOnedrive size={14} className="text-[#138DDC] mx-2" /></div>
-                    <p className="text-xs ml-3 select-none">OneDrive - Personal</p>
-                </div>
-                {activeItem === "oneDrive" && <QuickAccessList list={OneDrivelist}/>}
-
-                <div className={`${activeItem === "thisPc" ? "bg-neutral-300 hover:outline hover:outline-blue-500 hover:outline-offset-0 hover:outline-1" : ""} items-start hover:bg-blue-300 hover:bg-opacity-80 py-1 grid grid-cols-[10%_10%_1fr] gap- pl-2`} onClick={() => toggleActive("thisPc")} >
-                    <IoIosArrowForward size={14} className='text-gray-400' />
-                    <div><Image src={`/images/thispc.png`} width={40} height={40} alt="This PC" className='mx-1 hover:bg-transparent' /></div>
-                    <p className="text-xs ml-3 select-none">This PC</p>
-                </div>
-
-                <div className={`${activeItem === "Network" ? "bg-neutral-300 hover:outline hover:outline-blue-500 hover:outline-offset-0 hover:outline-1" : ""} items-start hover:bg-blue-300 hover:bg-opacity-80 py-1 grid grid-cols-[10%_10%_1fr] gap- pl-2`} onClick={() => toggleActive("Network")}>
-                    <IoIosArrowForward size={14} className='text-gray-400' />
-                    <div><Image src={`/images/network.png`} width={40} height={40} alt="Network" className='mx-1 hover:bg-transparent' /></div>
-                    <p className="text-xs ml-3 select-none">Network</p>
-                </div>
-
+                {/* Use SidebarList to render each item */}
+                <SidebarList title="Quick access" icon="IoStarSharp" list={quickAccesslist} />
+                <SidebarList title="OneDrive - Personal" icon="GrOnedrive" list={OneDrivelist} />
+                <SidebarList title="This PC"  list={ThisPCList} imageSrc="/images/thispc.png" />
+                <SidebarList title="Network" icon="Network" list={[]} imageSrc="/images/network.png" />
             </div>
-            <div className="pt-8">
-                <div className="">
-                    {/* Other content can go here */}
+            <div className="  w-[1155px]" >
+                <div className="w-full select-none" >
+                    <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleAccordion}  aria-expanded={isOpen}>
+                        <MdOutlineKeyboardArrowDown size={22} className={`${isOpen?"":"-rotate-90"}`}/>
+                        <span className="text-sm text-[#2C3E8E] w-[150px]">Frequent folders (4)</span>
+                        <div className="border-b w-full mb-"></div>
+                    </button>
+                    {isOpen && (
+                        <div className="w-full  px-6 bg-white">
+                        <Folder/>
+                        </div>
+                    )}
+                </div>
+                <div className="w-full select-none" >
+                    <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleAccordion}  aria-expanded={isOpen}>
+                        <MdOutlineKeyboardArrowDown size={22} className={`${isOpen?"":"-rotate-90"}`}/>
+                        <span className="text-sm text-[#2C3E8E] w-[150px]">Recent Files</span>
+                        <div className="border-b w-full mb-"></div>
+                    </button>
+                    {isOpen && (
+                        <div className="w-full  px-6 bg-white">
+                        <Files/>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

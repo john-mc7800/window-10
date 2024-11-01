@@ -36,6 +36,50 @@ const OneDrivelist = [
 
     },
   ];
+  export const ThisPCList = [
+    {
+      text: "3D Objects",
+      icon: "/images/3d object.png",
+    },
+    {
+      text: "Desktop",
+      icon: "/images/desktop.png",
+    },
+    {
+      text: "Documents",
+      icon: "/images/document.png",
+    },
+    {
+      text: "Downloads",
+      icon: "/images/download.png",
+    },
+    {
+      text: "Music",
+      icon: "/images/MUSIC.png",
+    },
+    {
+      text: "Pictures",
+      icon: "/images/picture.png",
+    },
+    {
+      text: "Videos",
+      icon: "/images/video.png",
+    },
+  ];
+  // /app/data/ThisPCMainList.js
+export const folders = [
+  "Images",
+  "Videos",
+  "Songs",
+  "Movies",
+  "PDF Files",
+  "Documents",
+  "Presentations",
+  "Spreadsheets",
+  
+];
+
+  
   
  
   export default OneDrivelist;

@@ -11,8 +11,8 @@ import { BiMessage } from "react-icons/bi";
 export default function Toolbar() {
   return (
     <>
-      <div className="absolute bottom-0 bg-[#1d1616] w-full h-[7vh]  z-10 backdrop-blur-3xl"></div>
-      <div className="absolute bottom-0 h-[8vh] w-full grid grid-cols-2 justify-between items-center text-white z-20">
+      <div className="absolute bottom-0 bg-[#1d1616] w-full h-[45px]  z-10 backdrop-blur-3xl "></div>
+      <div className="absolute bottom-0 h-[45px] w-full grid grid-cols-2 justify-between items-center text-white z-20">
         <div className="flex flex-row  items-center gap-x-4 mx-4">
           <IoLogoWindows size={20} className="" />
           <div className="font-thin text-base text-gray-500">||</div>
@@ -40,8 +40,8 @@ export default function Toolbar() {
             className="mx-2"
           />
         </div>
-        <div className="mx-2  ">
-          <div className="flex justify-end gap-x-4 items-center mt-2">
+        <div className="mx-2  h-[45px] flex justify-end items-center ">
+          <div className="flex justify-end gap-x-4 items-center -2">
             <IoIosArrowUp size={20} color="white" />
             <IoWifiOutline size={21} color="white" className="-rotate-45 " />
             <svg

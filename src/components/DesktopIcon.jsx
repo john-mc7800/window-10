@@ -43,7 +43,7 @@ export default function DesktopIcon() {
       ))}
 
       {openWindow === "thispc" && (
-        <div className="absolute top-0 left-0 bg-white shadow-lg w-[100vw] h-[93vh]">
+        <div className="absolute top-0 left-0 bg-white shadow-lg w-[1370px] h-[800px] bg-red">
           <TitleBar
             title={icons.find((icon) => icon.id === openWindow)?.name}
             onClose={closeWindow}
@@ -54,7 +54,7 @@ export default function DesktopIcon() {
         </div>
       )}
       {openWindow === "network" && (
-        <div className="absolute top-0 left-0 bg-white shadow-lg w-[100vw] h-[93vh]">
+        <div className="absolute top-0 left-0 bg-white shadow-lg w-[1370px] h-[800px]">
           {/* <TitleBar
             title={icons.find((icon) => icon.id === openWindow)?.name}
             onClose={closeWindow}
