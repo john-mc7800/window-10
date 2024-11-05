@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { IoLogoWindows } from "react-icons/io";
 import { FcFolder } from "react-icons/fc";
 import { FaOpera } from "react-icons/fa";
@@ -7,14 +8,46 @@ import { IoIosArrowUp } from "react-icons/io";
 import { IoWifiOutline } from "react-icons/io5";
 import ClockCalculator from "./ClockCalender";
 import { BiMessage } from "react-icons/bi";
+// import WindowMenuComponent from "./windowMenuComponent";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxAvatar } from "react-icons/rx";
+import { IoDocumentOutline } from "react-icons/io5";
+import { AiOutlinePicture } from "react-icons/ai";
+import { CiSettings } from "react-icons/ci";
+import { GiPowerButton } from "react-icons/gi";
 
 export default function Toolbar() {
+  const[windowMenu,setWindowMenu]=useState(false);
+  const toggleWindowMenu = () => {
+    setWindowMenu((prev) => !prev);
+  };
+  
   return (
     <>
       <div className="absolute bottom-0 bg-[#1d1616] w-full h-[45px]  z-10 backdrop-blur-3xl "></div>
       <div className="absolute bottom-0 h-[45px] w-full grid grid-cols-2 justify-between items-center text-white z-20">
         <div className="flex flex-row  items-center gap-x-4 mx-4">
+          <div className="relative" onClick={toggleWindowMenu}>
           <IoLogoWindows size={20} className="" />
+          {windowMenu&&<>
+            <div className="w-[650px] h-[600px] absolute bottom-8 -left-5 bg-[#262625]  z-1 grid grid-cols-[50px_200px_1fr] ">
+              <div className="flex flex-col justify-between items-center mt-4">
+                <RxHamburgerMenu size={22}/>
+                <div className="flex flex-col justify-between items-center text-white gap-6 mb-4">
+                <RxAvatar size={22}/>
+                <IoDocumentOutline size={22} />
+                <AiOutlinePicture size={22} />
+                <CiSettings size={22} />
+                <GiPowerButton size={22} />
+                </div>
+              </div>
+              <div className="bg-blue-800">b</div>
+              <div className="bg-yellow-800">c</div>
+            </div>
+          {/* <WindowMenuComponent/> */}
+          </>}
+          </div>
+          
           <div className="font-thin text-base text-gray-500">||</div>
           <FcFolder size={30} className="" />
           <Image width={32} height={32} src="https://img.icons8.com/fluency/48/chrome.png" alt="Chrome" className="mx-2"/>
