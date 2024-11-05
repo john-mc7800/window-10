@@ -134,7 +134,36 @@ const OneDrivelist = [
     imageUrl: "/images/files/docx.png",
   },
 ];
-
+export const ThisPcComponentFiles = [
+  {
+    file: "3D Object",
+    imageUrl: "/images/3d object.png",
+  },
+  {
+    file: "Desktop",
+    imageUrl: "/images/desktop.png",
+  },
+  {
+    file: "Documents",
+    imageUrl: "/images/document2.png",
+  },
+  {
+    file: "Download",
+    imageUrl: "/images/download.png",
+  },
+  {
+    file: "Music",
+    imageUrl: "/images/music.png",
+  },
+  {
+    file: "Picture",
+    imageUrl: "/images/picture.png",
+  },
+  {
+    file: "Video",
+    imageUrl: "/images/video.png",
+  },
+];
 
   // /app/data/ThisPCMainList.js
 export const folders = [

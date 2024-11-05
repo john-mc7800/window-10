@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import OneDrivelist, { folders, quickAccesslist, Recentfile, ThisPCList } from '@/data/ThisPCMainList';
+import OneDrivelist, {  quickAccesslist,  ThisPCList } from '@/data/ThisPCMainList';
 import SidebarList from './SidebarList';
-import Folder from '../Folder';
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-
+import QuickAccess from './SidebarComponents/QuickAccess';
+import OneDrive from './SidebarComponents/OneDrive';
+import SortBar from './SortBar';
+import ThisPcComponent from './SidebarComponents/ThisPcComponent';
 
 
 export default function ThisPCMain() {
     const [FrequentIsOpen, setFrequentIsOpen] = useState(true)
-    const [RecentIsOpen, setRecentIsOpen] = useState(true) 
     const [QuickAccessIsOpen, setQuickAccessIsOpen] = useState(false)
     const [OneDriveIsOpen, setOneDriveIsOpen] = useState(false)
     const [ThisPCIsOpen, setThisPCIsOpen] = useState(false)
@@ -40,7 +40,6 @@ export default function ThisPCMain() {
 
     }
     const toggleFrequentAccordion = () => {setFrequentIsOpen(!FrequentIsOpen)}
-    const toggleRecentAccordion = () => {setRecentIsOpen(!RecentIsOpen)}
     return (
         <div className="w-fill h-fill grid grid-cols-[202px_1fr] h-[100%] fixed top-[70px] select-none">
             <div className="pt-4 border-r h-full">
@@ -60,36 +59,18 @@ export default function ThisPCMain() {
             </div>
             <div className=" w-[1155px]" >
             {QuickAccessIsOpen&&(<>
-                <div className="w-full select-none" >
-                    <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleFrequentAccordion}  aria-expanded={FrequentIsOpen}>
-                        <MdOutlineKeyboardArrowDown size={22} className={`${FrequentIsOpen?"":"-rotate-90"}`}/>
-                        <span className="text-sm text-[#2C3E8E] w-[150px]" >Frequent folders (4)</span>
-                        <div className="border-b w-full mb-"></div>
-                    </button>
-                    {FrequentIsOpen && (
-                        <div className="w-full  px-6 bg-white">
-                        <Folder folders={folders}/>
-                        </div>
-                    )}
-                </div>
-                <div className="w-full select-none" >
-                    <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleRecentAccordion}  aria-expanded={RecentIsOpen}>
-                        <MdOutlineKeyboardArrowDown size={22} className={`${RecentIsOpen?"":"-rotate-90"}`}/>
-                        <span className="text-sm text-[#2C3E8E] w-[150px]">Recent Files</span>
-                        <div className="border-b w-full mb-"></div>
-                    </button>
-                    {RecentIsOpen && (
-                        <div className="w-full  px-6 bg-white">
-                        <Folder folders={Recentfile}/>
-                        </div>
-                    )}
-                    
-                </div>
+                <QuickAccess toggleFrequentAccordion={toggleFrequentAccordion} FrequentIsOpen={FrequentIsOpen} />
                 </>)}
-
-                {OneDriveIsOpen&&(<h1>OneDriveIsOpen</h1>)}
-                {ThisPCIsOpen&&(<h1>fghjkl</h1>)}
-                {NetworkIsOpen&&(<h1>NetworkIsOpen</h1>)}
+                {OneDriveIsOpen&&
+                    <>
+                    <SortBar/>
+                    <OneDrive />
+                    </>
+                }
+                {ThisPCIsOpen&&<>
+                <ThisPcComponent/>
+                </>}
+                {NetworkIsOpen&&<h1 className='text-xs text-center pt-4'>This Folder is empty</h1>}
             </div>
         </div>
     );
