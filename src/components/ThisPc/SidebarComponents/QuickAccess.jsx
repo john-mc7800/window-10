@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Folder from '@/components/Folder'
+import Folder from '@/components/ThisPc/Folder'
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { folders, Recentfile } from '@/data/ThisPCMainList';
-
 
 export default function QuickAccess({toggleFrequentAccordion,FrequentIsOpen}) {
   const [RecentIsOpen, setRecentIsOpen] = useState(true) 

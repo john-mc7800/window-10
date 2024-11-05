@@ -17,27 +17,10 @@ export default function Toolbar() {
           <IoLogoWindows size={20} className="" />
           <div className="font-thin text-base text-gray-500">||</div>
           <FcFolder size={30} className="" />
-          <Image
-            width={32}
-            height={32}
-            src="https://img.icons8.com/fluency/48/chrome.png"
-            alt="Chrome"
-            className="mx-2"
-          />
-          <Image
-            width={32}
-            height={32}
-            src="https://img.icons8.com/fluency/48/ms-edge-new.png"
-            alt="Microsoft Edge"
-            className="mx-2"
-          />
+          <Image width={32} height={32} src="https://img.icons8.com/fluency/48/chrome.png" alt="Chrome" className="mx-2"/>
+          <Image width={32} height={32} src="https://img.icons8.com/fluency/48/ms-edge-new.png" alt="Microsoft Edge" className="mx-2" />
           <FaOpera size={22} className="text-red-700" />
-          <Image
-            width={32}
-            height={32}
-            src="https://img.icons8.com/fluency/48/skype.png"
-            alt="Skype"
-            className="mx-2"
+          <Image width={32} height={32} src="https://img.icons8.com/fluency/48/skype.png" alt="Skype" className="mx-2"
           />
         </div>
         <div className="mx-2  h-[45px] flex justify-end items-center ">

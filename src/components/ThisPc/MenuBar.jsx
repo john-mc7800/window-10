@@ -40,7 +40,7 @@ export default function MenuBar({ onClose }) {
 
       {fileIsOpen && (
         <div ref={menuRef} className="w-[650px] h-[300px] relative -top-9 z-10 bg-white border mt-8 ">
-          <button onClick={handleFileButton} className='text-start text-xs px-4 py-1 cursor-context-menu border-y border-gray-200 z-10 w-fit text-white font-thin text-xs bg-[#005596]'>File</button>
+          <button onClick={handleFileButton} className='text-start text-xs px-4 py-1 cursor-context-menu border-y border-gray-200 z-10 w-fit text-white font-thin  bg-[#005596]'>File</button>
           <div className="w-[648px] h-[260px] grid grid-cols-[50%_50%] border ">
             <div className="space-y-1 bg-[#FBFCFD] border overflow-hidden">
               {/* Menu items */}
