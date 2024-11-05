@@ -9,10 +9,11 @@ import ThisPcComponent from './SidebarComponents/ThisPcComponent';
 
 export default function ThisPCMain() {
     const [FrequentIsOpen, setFrequentIsOpen] = useState(true)
-    const [QuickAccessIsOpen, setQuickAccessIsOpen] = useState(false)
+    const [QuickAccessIsOpen, setQuickAccessIsOpen] = useState(true)
     const [OneDriveIsOpen, setOneDriveIsOpen] = useState(false)
     const [ThisPCIsOpen, setThisPCIsOpen] = useState(false)
     const [NetworkIsOpen, setNetworkIsOpen] = useState(false)
+    // const [DefaultIsOpen, setDefaultIsOpen] = useState(false)
 
     const toggleQuickAccesscomponenet = () => {
         setQuickAccessIsOpen(true)
