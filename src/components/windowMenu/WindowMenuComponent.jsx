@@ -24,7 +24,7 @@ export default function WindowMenuComponent({windowMenuRef}) {
               <div className="bg-re-600 w-[98px] h-[100px] bg-gray-200 bg-opacity-10 px-2 py-1 hover:outline hover:outline-offset-2 hover:outline-1 text-white flex flex-col justify-between text-xs">
                 <div className="">
                 <p className='font-thin leading-1'>Microsoft OneDrive</p>
-                <p className='text-gray-400'>Don't forget to back up your...</p>
+                <p className='text-gray-400'>Dont forget to back up your...</p>
                 </div>
                 <p>Mail</p>
               </div>
