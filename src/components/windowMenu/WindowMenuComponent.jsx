@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
 import { FaLinkedin, FaSpotify } from "react-icons/fa";
-import WindowMenuSection1 from './windowMenuSection1';
 import WindowMenuSection2 from './WindowMenuSection2';
+import WindowMenuSection1 from './windowMenuSection1';
 
 
 export default function WindowMenuComponent({windowMenuRef}) {
@@ -30,7 +30,6 @@ export default function WindowMenuComponent({windowMenuRef}) {
               </div>
               <div className="bg-yello-300 w-[98px] h-[100px] bg-gray-200 bg-opacity-10 p-2 hover:outline hover:outline-offset-2 hover:outline-1 bg-cover bg-center" style={{ backgroundImage: "url('/images/desktop.jpg')" }}></div>
               <div className="bg-yello-300 w-[98px] h-[100px] bg-gray-200 bg-opacity-10  hover:outline hover:outline-offset-2 hover:outline-1" >
-              {/* <Image src="/images/linkedin.png" width={150} height={150} alt="skype" className='scale-125'/> */}
               <FaLinkedin className='text-blue-500' size={100}/>
               </div>
             </div>
