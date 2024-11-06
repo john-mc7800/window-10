@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          'var(--font-inter)', // The Inter font loaded from Google Fonts
+          'Segoe UI',           // Fallback to system font Segoe UI
+          'Arial',              // Fallback to Arial
+          'sans-serif',         // Generic sans-serif fallback
+        ],
+      },
       rotate: {
         '255': '225deg',
       },

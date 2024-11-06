@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoLogoWindows } from "react-icons/io";
 import { FcFolder } from "react-icons/fc";
 import { FaOpera } from "react-icons/fa";
@@ -18,9 +18,26 @@ import { GiPowerButton } from "react-icons/gi";
 
 export default function Toolbar() {
   const[windowMenu,setWindowMenu]=useState(false);
+  const windowMenuRef = useRef(null);
   const toggleWindowMenu = () => {
     setWindowMenu((prev) => !prev);
   };
+  // Close window menu when clicking outside
+  const handleClickOutside = (event) => {
+    if (windowMenuRef.current && !windowMenuRef.current.contains(event.target)) {
+      setWindowMenu(false); // Close the window menu
+    }
+  };
+
+  // Add event listener when the component mounts
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the event listener on unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   
   return (
     <>
@@ -30,8 +47,8 @@ export default function Toolbar() {
           <div className="relative" onClick={toggleWindowMenu}>
           <IoLogoWindows size={20} className="" />
           {windowMenu&&<>
-            <div className="w-[650px] h-[600px] absolute bottom-8 -left-5 bg-[#262625]  z-1 grid grid-cols-[50px_200px_1fr] ">
-              <div className="flex flex-col justify-between items-center mt-4">
+            <div ref={windowMenuRef} className="w-[650px] h-[630px] absolute bottom-8 -left-5 bg-[#262625] z-1 grid grid-cols-[50px_200px_1fr] pt-4">
+              <div className="flex flex-col justify-between items-center">
                 <RxHamburgerMenu size={22}/>
                 <div className="flex flex-col justify-between items-center text-white gap-6 mb-4">
                 <RxAvatar size={22}/>
@@ -41,7 +58,60 @@ export default function Toolbar() {
                 <GiPowerButton size={22} />
                 </div>
               </div>
-              <div className="bg-blue-800">b</div>
+              <div className="bg-blu-800 px-2 space-y-4">
+                <div className="space-y-2">
+                <h3 className="text-white text-xs font-thin pl-1">Recently added</h3>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/postman.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Postman</p>
+                </div>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/mongodb.png" width={30} height={30} alt="mongodb" className="bg-white rounded-full p-0.5"/>
+                  <p className="text-white text-xs font-thin">MongoDBCompass</p>
+                </div>
+                </div>
+                <div className="space-y-2">
+                <h3 className="text-white text-xs font-thin pl-1">#</h3>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/3d white.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">3D Viewer</p>
+                </div>
+                </div>
+                <div className="space-y-2">
+                <h3 className="text-white text-xs font-thin pl-1">C</h3>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/calculator.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Calculator</p>
+                </div>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/calendar.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Calender</p>
+                </div>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/camera.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Camera</p>
+                </div>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/folder2.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Chrome Apps</p>
+                </div>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/clock.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Clock</p>
+                </div>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/cortana.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin">Cortana</p>
+                </div>
+                </div>
+                <div className="space-y-2">
+                <h3 className="text-white text-xs font-thin pl-1">F</h3>
+                <div className="flex flex-row items-center gap-4 ">
+                <Image src="/images/.png" width={30} height={30} alt="postman"/>
+                  <p className="text-white text-xs font-thin"></p>
+                </div>
+                </div>
+              </div>
               <div className="bg-yellow-800">c</div>
             </div>
           {/* <WindowMenuComponent/> */}
