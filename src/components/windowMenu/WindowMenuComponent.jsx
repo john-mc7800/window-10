@@ -2,13 +2,14 @@ import React from 'react'
 import Image from 'next/image';
 import { FaLinkedin, FaSpotify } from "react-icons/fa";
 import WindowMenuSection2 from './WindowMenuSection2';
+import WindowMenuSection1 from './windowMenuSection1';
 
 
 export default function WindowMenuComponent({windowMenuRef}) {
   return (
     <>
       <div ref={windowMenuRef} className="w-[650px] h-[630px] absolute bottom-8 -left-5 bg-[#262625] z-1 grid grid-cols-[50px_260px_250] pt-4">
-      
+        <WindowMenuSection1/>
         <WindowMenuSection2/>
         <div className=" fixed left-[340px]  mt-4  overflo-auto w-[250px]">
         <div className="">
