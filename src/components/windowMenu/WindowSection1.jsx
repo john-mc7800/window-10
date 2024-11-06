@@ -14,7 +14,7 @@ const iconItems = [
   { id: 5, icon: <GiPowerButton size={22} />, name: 'Power' },
 ];
 
-export default function WindowMenuSection1() {
+export default function WindowSection1() {
   return (
     <div className="flex flex-col justify-between items-center bg-re-800 w-[50px] pl-4">
       <RxHamburgerMenu size={18} />
