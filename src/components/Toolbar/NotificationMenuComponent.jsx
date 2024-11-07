@@ -28,7 +28,7 @@ export default function NotificationMenuComponent({ notificationMessage = "No ne
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-[50px_1fr] items-center justify-between px-8 py-4 ">
+      <div className="grid grid-cols-[50px_1fr] items-center justify-between px-16 py-4 ">
         <div className="">
           <Image src="/images/brightness.png" width={20} height={20} alt="brightness" />
         </div>
