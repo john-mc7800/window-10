@@ -9,23 +9,10 @@ import ToolbarRightSection from "./ToolbarRightSection";
 
   export default function Toolbar() {
     const[windowMenu,setWindowMenu]=useState(false);
-    const windowMenuRef = useRef(null);
     const toggleWindowMenu = () => {
       setWindowMenu((prev) => !prev);
     };
-    const handleClickOutside = (event) => {
-      if (windowMenuRef.current && !windowMenuRef.current.contains(event.target)) {
-        setWindowMenu(false); 
-      }
-    };
-
-    useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
-
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, []);
+    
     
     return (
       <>
@@ -36,7 +23,7 @@ import ToolbarRightSection from "./ToolbarRightSection";
             <IoLogoWindows size={20} className="" />
             {windowMenu&&
             <div className="z-20">
-            <WindowMenuComponent windowMenuRef={windowMenuRef}/>
+            <WindowMenuComponent />
             </div>}
             </div>
             <div className="font-thin text-base text-gray-500">||</div>
