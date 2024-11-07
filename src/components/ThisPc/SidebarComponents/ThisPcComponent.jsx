@@ -38,7 +38,7 @@ export default function ThisPcComponent() {
                     <div className="hover:bg-blue-50 p-1">
                         <div className="grid grid-cols-[60px_1fr] items-center pl-4">
                         <Image src="/images/drive c2.png" width={50} height={50} alt="Icon" />
-                        <div className="text-xs">
+                        <div className="text-xs text-black">
                             <p>Local Disk (C:)</p>
                             <div className="w-full bg-gray-200  h-3">
                                 <div className="bg-[#26A0DA] h-3 my-1  w-3/4" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -50,7 +50,7 @@ export default function ThisPcComponent() {
                     <div className="hover:bg-blue-50 p-1">
                         <div className="grid grid-cols-[60px_1fr] items-center pl-4">
                         <Image src="/images/drive d.png" width={50} height={50} alt="Icon" />
-                        <div className="text-xs">
+                        <div className="text-xs text-black">
                             <p>Local Disk (d:)</p>
                             <div className="w-full bg-gray-200  h-3">
                                 <div className="bg-[#DA2626] h-3 my-1  w-3/4" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>

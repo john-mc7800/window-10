@@ -153,7 +153,7 @@ export const ThisPcComponentFiles = [
   },
   {
     file: "Music",
-    imageUrl: "/images/music.png",
+    imageUrl: "/images/MUSIC.png",
   },
   {
     file: "Picture",
