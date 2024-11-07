@@ -8,7 +8,7 @@ export const AppStateContext = createContext(null);
 function AppState({children}) {
   const [openWindow, setOpenWindow] = useState(null);
   const closeWindow = () => {
-    setOpenWindow(null);
+    setOpenWindow(false);
   };
 
   return (

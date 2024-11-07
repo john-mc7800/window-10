@@ -7,7 +7,7 @@ import { AppStateContext } from "@/context/AppState";
 import IconsData from "@/data/IconsData";
 
 export default function FileManagerComponenet({onClose}) {
-  const{openWindow}=useContext(AppStateContext)
+  const{openWindow,}=useContext(AppStateContext)
   const [icons] = useState(IconsData);
 
   return (
