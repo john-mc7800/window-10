@@ -1,6 +1,6 @@
 import "./globals.css";
 import {Inter} from "next/font/google";
-import Toolbar from "@/components/Toolbar";
+import Toolbar from "@/components/Toolbar/Toolbar";
 import AppState from "@/context/AppState";
 
 const inter = Inter({

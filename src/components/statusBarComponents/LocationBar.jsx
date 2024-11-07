@@ -16,9 +16,9 @@ export default function LocationBar() {
       <div className="border flex justify-between">
         <div className="flex flex-row items-center">
           <svg xmlns="http://www.w3.org/2000/svg" className='text-sm ml-2' width="1em" height="1em" viewBox="0 0 24 24"><path fill="#2FB3FF" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21z"/></svg>
-          <IoIosArrowForward size={14}/>
-          <p className='text-xs'>Quick access</p>
-          <IoIosArrowForward size={14} />
+          <IoIosArrowForward className="text-black" size={14}/>
+          <p className='text-xs text-black'>Quick access</p>
+          <IoIosArrowForward className="text-black" size={14} />
         </div>
         <div className="flex flex-row items-center text-gray-500">
         <IoIosArrowDown size={14} />

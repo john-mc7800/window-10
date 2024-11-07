@@ -43,7 +43,7 @@ export default function ThisPCMain() {
     const toggleFrequentAccordion = () => {setFrequentIsOpen(!FrequentIsOpen)}
     return (
         <div className="w-fill h-fill grid grid-cols-[202px_1fr] h-[100%] fixed top-[70px] select-none">
-            <div className="pt-4 border-r h-full">
+            <div className="pt-4 border-r h-[651px]">
                 {/* Use SidebarList to render each item */}
                 <div onClick={toggleQuickAccesscomponenet}>
                 <SidebarList title="Quick access" icon="IoStarSharp" list={quickAccesslist} />

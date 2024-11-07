@@ -13,7 +13,7 @@ export default function ThisPcComponent() {
 
   return (
     <>
-        <div className="w-full select-none" >
+        <div className="w-full select-none bg-white" >
             <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleFolder}  aria-expanded={FolderIsOpen}>
                 <MdOutlineKeyboardArrowDown size={24} className={`${FolderIsOpen?"":"-rotate-90"} text-gray-500 `}/>
                 <span className="text-sm text-[#2C3E8E] w-[80px]">Folder (7)</span>

@@ -33,9 +33,9 @@ export default function MenuBar({ onClose }) {
     <>
       <div className='flex flex-row text-xs items-center cursor-context-menu fixed'>
         <button onClick={handleFileButton} className='px-4 cursor-context-menu  z-10 bg-[#005596] text-white py-0.5 '>File</button>
-        <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0'>Home</button>
-        <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0'>Share</button>
-        <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0'>View</button>
+        <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0 text-black'>Home</button>
+        <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0 text-black'>Share</button>
+        <button className='px-4 cursor-context-menu hover:bg-gray-50 hover:outline hover:outline-offset-0 hover:outline-1 hover:outline-gray-200 z-0 text-black'>View</button>
       </div>
 
       {fileIsOpen && (

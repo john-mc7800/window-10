@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { IoIosArrowUp } from "react-icons/io";
-import ClockCalculator from "./ClockCalender";
 import { BiMessage } from "react-icons/bi";
 import Image from 'next/image';
+import ClockCalculator from '../ClockCalender';
 import NotificationMenuComponent from './NotificationMenuComponent';
   
 

@@ -14,11 +14,11 @@ export default function TitleBar({title,onClose}) {
     <div>
       <div className="flex flex-row items-center space-x-2">
       <FcFolder size={18}/>
-      <p className='cursor-context-menu'>|</p>
+      <p className='cursor-context-menu text-black'>|</p>
       <Image src="/images/page tick1.png" width={17 } height={17} alt='page tick'/>
-      <IoMdArrowDropdown  size={18}/>      
-      <p className='cursor-context-menu'>|</p>
-      <h1 className="text-xs text-black cursor-context-menu">{title==="This PC"?"File Explorer":title}</h1>
+      <IoMdArrowDropdown className="text-black" size={18}/>      
+      <p className='cursor-context-menu text-black'>|</p>
+      <h1 className="text-xs text-black cursor-context-menu ">{title==="This PC"?"File Explorer":title}</h1>
       </div>
       
       <div className="flex flex-row items-center absolute top-0 right-0">

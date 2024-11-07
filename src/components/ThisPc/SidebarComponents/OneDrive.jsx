@@ -47,9 +47,9 @@ export default function OneDrive() {
           <div className="flex items-center text-blue-600">
             <IoMdCloudOutline size={18} />
           </div>
-          <div>{item.date}</div>
-          <div>{item.type}</div>
-          <div>{item.size}</div>  
+          <div className="text-black">{item.date}</div>
+          <div className="text-black">{item.type}</div>
+          <div className="text-black">{item.size}</div>  
         </div>
       ))}
     </>
