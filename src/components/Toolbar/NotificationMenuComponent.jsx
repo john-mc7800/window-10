@@ -9,18 +9,18 @@ export default function NotificationMenuComponent({ notificationMessage = "No ne
     setValue(event.target.value);
   };
   return (
-    <div className="z-20 bg-[#262625] text-white fixed right-0 bottom-11 select-none w-[420px] h-[730px]">
+    <div className="z-20 bg-[#262625] text-white fixed right-0 bottom-11 select-none w-[29vw] h-[96vh]">
       <p className="text-end text-[#8CB5D4] px-6 pt-6 text-xs hover:text-white">Manage Notifications</p>
       
       {/* Notification message section */}
-      <div className="w-full h-[290px] text-sm text-center content-center font-normal">
+      <div className="w-full h-[37vh] text-sm text-center content-center font-normal">
         <p>{notificationMessage}</p>
       </div>
       
       <p className="text-[#8CB5D4] py-1 px-4 text-sm hover:text-white">Collapse</p>
       
       {/* Menu items grid */}
-      <div className="w-full h-[300px] grid grid-cols-4 px-4 py-2 gap-1 ">
+      <div className="w-full h-[40vh] grid grid-cols-4 px-4 py-2 gap-1 ">
         {menuItems.map((item, index) => (
           <div key={index} className="flex flex-col justify-between bg-gray-200 bg-opacity-10 p-1 hover:outline hover:outline-offset-0 hover:outline-1 bg-re-900">
             <Image src={item.icon} width={20} height={20} alt={item.label} />

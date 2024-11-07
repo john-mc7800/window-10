@@ -16,7 +16,7 @@ const iconItems = [
 
 export default function WindowSection1() {
   return (
-    <div className="flex flex-col justify-between items-center bg-re-800 w-[50px] pl-4">
+    <div className="flex flex-col justify-between items-center pl-4 h-[76vh]">
       <RxHamburgerMenu size={18} />
       <div className="flex flex-col justify-between items-center text-white gap-6 mb-4">
         {iconItems.map((item) => (

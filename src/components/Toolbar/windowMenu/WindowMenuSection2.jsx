@@ -46,7 +46,7 @@ const sidebarItems = [
 
 export default function WindowMenuSection2() {
   return (
-    <div className="bg-blu-800 space-y-4 fixed left-[60px] overflow-auto scrollbar-custom z-2 h-[630px] w-[260px]">
+    <div className="bg-blu-800 space-y-4  left-[60px] overflow-auto scrollbar-custom z-2 h-[76vh]  ">
     {sidebarItems.map((category, index) => (
       <div key={index} className="space-y-2 mt-4">
         <h3 className="text-white text-xs font-thin pl-2">{category.category}</h3>

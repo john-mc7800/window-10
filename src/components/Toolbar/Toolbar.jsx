@@ -27,8 +27,8 @@ import ToolbarRightSection from "./ToolbarRightSection";
     
     return (
       <>
-        <div className="absolute bottom-0 bg-[#1d1616] w-full h-[45px]  z-10 backdrop-blur-3xl "></div>
-        <div className="absolute bottom-0 h-[45px] w-full grid grid-cols-2 justify-between items-center text-white z-20 select-none">
+        <div className="absolute bottom-0 bg-[#1d1616] w-full h-[7vh]  z-10 backdrop-blur-3xl "></div>
+        <div className="absolute bottom-0 h-[7vh] w-full grid grid-cols-2 justify-between items-center text-white z-20 select-none">
           <div className="flex flex-row  items-center gap-x-4 mx-4">
             <div className="relative" onClick={toggleWindowMenu}>
             <IoLogoWindows size={20} className="" />
@@ -54,7 +54,7 @@ import ToolbarRightSection from "./ToolbarRightSection";
             <Image width={32} height={32} src="https://img.icons8.com/fluency/48/skype.png" alt="Skype" className="mx-2"
             />
           </div>
-          <div className="mx-2  h-[45px] flex justify-end items-center ">
+          <div className="mx-2  h-[7vh] flex justify-end items-center ">
             <ToolbarRightSection/>
           </div>
         </div>

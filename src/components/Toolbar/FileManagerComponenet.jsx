@@ -11,7 +11,7 @@ export default function FileManagerComponenet({onClose}) {
   const [icons] = useState(IconsData);
 
   return (
-    <div className="absolute bottom-90 left-0 bg-white shadow-lg w-[1370px] h-[722px] z-2">
+    <div className="absolute bottom-90 left-0 bg-white shadow-lg w-[100vw] h-[93.9vh] z-2">
       <TitleBar title={icons.find((icon) => icon.id === openWindow)?.name} onClose={onClose}/>
       <MenuBar />
       <LocationBar />
