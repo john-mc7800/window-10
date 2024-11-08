@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable}  antialiased max-w-[100vw] h-fit `}
       >
         <AppState>
-          <div className="z-50">
+          <div className="z-50 ">
           <Toolbar />  
           </div>
         {children}

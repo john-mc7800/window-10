@@ -26,7 +26,7 @@ import ToolbarRightSection from "./ToolbarRightSection";
     
     
     return (
-      <div className="h-fit">
+      <div className="h-fit ">
         <div className="absolute bottom-0 bg-[#1d1616] w-full h-[7vh]  z-10 backdrop-blur-3xl "></div>
         <div className="absolute bottom-0 h-[7vh] w-full grid grid-cols-2 justify-between items-center text-white z-20 select-none">
           <div className="flex flex-row  items-center gap-x- ">
