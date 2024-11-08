@@ -38,7 +38,7 @@ export default function OneDrive() {
   return (
     <>
       {items.map((item, index) => (
-        <div key={index} className="grid grid-cols-[250px_1fr_1fr_1fr_1fr] w-[800px] m-2 text-xs overflow-hidden">
+        <div key={index} className="grid grid-cols-[250px_1fr_1fr_1fr_1fr] w-[60vw] m-2 text-xs overflow-hidden">
           <div className="flex flex-row items-center gap-2">
             <Image src={item.image} width={20} height={20} alt="Icon" />
             <p className="text-black">{item.label}</p>

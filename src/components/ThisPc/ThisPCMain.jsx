@@ -42,9 +42,8 @@ export default function ThisPCMain() {
     }
     const toggleFrequentAccordion = () => {setFrequentIsOpen(!FrequentIsOpen)}
     return (
-        <div className="w-fill h-fill grid grid-cols-[202px_1fr] h-[100%] fixed top-[70px] select-none">
-            <div className="pt-4 border-r h-[651px]">
-                {/* Use SidebarList to render each item */}
+        <div className="w-full  grid grid-cols-[202px_1fr] h-[100%] fixed top-[70px] select-none">
+            <div className="pt-4 border-r h-auto -[82vh] z-0">
                 <div onClick={toggleQuickAccesscomponenet}>
                 <SidebarList title="Quick access" icon="IoStarSharp" list={quickAccesslist} />
                 </div>
@@ -58,7 +57,7 @@ export default function ThisPCMain() {
                 <SidebarList title="Network" icon="Network" list={[]} imageSrc="/images/network.png" />
                 </div>
             </div>
-            <div className=" w-[1155px]" >
+            <div className="w-[100vw] md:w-[88vw] lg:w-full 3xl:w-full" >
             {QuickAccessIsOpen&&(<>
                 <QuickAccess toggleFrequentAccordion={toggleFrequentAccordion} FrequentIsOpen={FrequentIsOpen} />
                 </>)}
@@ -71,7 +70,7 @@ export default function ThisPCMain() {
                 {ThisPCIsOpen&&<>
                 <ThisPcComponent/>
                 </>}
-                {NetworkIsOpen&&<h1 className='text-xs text-center pt-4'>This Folder is empty</h1>}
+                {NetworkIsOpen&&<h1 className='text-xs text-center pt-4 text-black'>This Folder is empty</h1>}
             </div>
         </div>
     );

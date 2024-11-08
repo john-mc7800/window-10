@@ -8,7 +8,7 @@ import WindowSection1 from './WindowSection1';
 export default function WindowMenuComponent({windowMenuRef}) {
   return (
     <>
-      <div ref={windowMenuRef} className="w-[48vw] h-[78vh] absolute bottom-8 -left-5 bg-[#262625] z-1 grid grid-cols-[4vw_19vw_1fr] pt-4">
+      <div ref={windowMenuRef} className="w-[48vw] h-[78vh] absolute bottom-11 -left-5 bg-[#262625] z-1 grid grid-cols-[4vw_19vw_1fr] pt-4">
         <WindowSection1/>
         <WindowMenuSection2/>
         <div className="left-[px]  pt-4 mx-2 h-[76vh] overflow-auto scrollbar-custom">

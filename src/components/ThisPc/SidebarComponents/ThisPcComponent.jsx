@@ -16,7 +16,7 @@ export default function ThisPcComponent() {
         <div className="w-full select-none bg-white" >
             <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleFolder}  aria-expanded={FolderIsOpen}>
                 <MdOutlineKeyboardArrowDown size={24} className={`${FolderIsOpen?"":"-rotate-90"} text-gray-500 `}/>
-                <span className="text-sm text-[#2C3E8E] w-[80px]">Folder (7)</span>
+                <span className="text-sm text-[#2C3E8E] w-20">Folder (7)</span>
                 <div className="border-b w-full mb-"></div>
             </button>
             {FolderIsOpen && (
@@ -29,7 +29,7 @@ export default function ThisPcComponent() {
         <div className="w-full select-none" >
             <button className='flex flex-row items-center w-full pt-4 px-2 text-left 'onClick={toggleDrive}  aria-expanded={DriveIsOpen}>
                 <MdOutlineKeyboardArrowDown size={24} className={`${DriveIsOpen?"":"-rotate-90"} text-gray-500 `}/>
-                <span className="text-sm text-[#2C3E8E] w-[160px]">Devices and Drivers</span>
+                <span className="text-sm text-[#2C3E8E] w-40">Devices and Drivers</span>
                 <div className="border-b w-full mb-"></div>
             </button>
             {DriveIsOpen && (

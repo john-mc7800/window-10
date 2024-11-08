@@ -29,7 +29,7 @@ export default function DesktopIcon() {
         </div>
       ))}
       {openWindow === "thispc" && (
-        <div className="absolute top-0 left-0 bg-white shadow-lg w-[100vw] h-[100vh] bg-red">
+        <div className="absolute top-0 left-0 bg-white shadow-lg w-[100vw] h-[100vh] ">
           <TitleBar title={icons.find((icon) => icon.id === openWindow)?.name} onClose={closeWindow}/>
           <MenuBar />
           <LocationBar />
